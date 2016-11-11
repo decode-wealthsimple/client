@@ -9,11 +9,6 @@ angular.module('myApp.survey', ['ngRoute'])
   });
 }])
 
-.controller('SurveyCtrl', ['$scope', function($scope) {
-  $scope.cities = [
-    'Amsterdam',
-    'Berlin',
-    'Toronto',
-    'Montreal',
-  ];
+.controller('SurveyCtrl', ['$scope', 'nomadService', function($scope, nomadService) {
+  $scope.cities = nomadService.getDestinations();
 }]);
