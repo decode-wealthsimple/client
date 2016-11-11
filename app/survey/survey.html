@@ -1,1 +1,6 @@
-<p>This is the partial for view 1.</p>
+<h3 class="question-header">Where are you headed?</h3>
+
+<select class="form-control">
+  <option disabled selected default>Select a destination</option>
+  <option ng-repeat="city in cities" value="{{city}}">{{city}}</option>
+</select>

@@ -9,6 +9,11 @@ angular.module('myApp.survey', ['ngRoute'])
   });
 }])
 
-.controller('SurveyCtrl', [function() {
-
+.controller('SurveyCtrl', ['$scope', function($scope) {
+  $scope.cities = [
+    'Amsterdam',
+    'Berlin',
+    'Toronto',
+    'Montreal',
+  ];
 }]);
