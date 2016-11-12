@@ -3,7 +3,7 @@
 	<div class="form-group form-box form-center">
 		<form class="flex form-group">
 			<input autocomplete="off" name="origins" id="origin" type="text" placeholder="Montreal, Canada" ng-model="origin" uib-typeahead="city.name for city in cities | filter:$viewValue | limitTo:10"
-			class="form-control rounded center-div input-dimensions">
+			class="form-control rounded center-div input-dimensions"  my-enter="saveOrigin(origin)">
 			<img src="images/plane-icon.png" class="airplane">
 			<input autocomplete="off" name="destinations" id="destination" type="text" placeholder="Montreal, Canada" ng-change="" ng-model="destination" uib-typeahead="city.name for city in cities | filter:$viewValue | limitTo:10"
 			class="form-control rounded center-div input-dimensions" my-enter="getImage(destination)">
