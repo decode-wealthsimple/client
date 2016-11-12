@@ -1,6 +1,9 @@
-<h3 class="question-header">Where are you headed?</h3>
-
-<select class="form-control">
-  <option disabled selected default>Select a destination</option>
-  <option ng-repeat="city in cities" value="{{city}}">{{city}}</option>
-</select>
+<div class="splash">
+	<div class="form-box">
+		<form>
+			<input type="text" value={{origin}} class="form-control rounded center-div" />
+			<img src="images/airplane.png" class="airplane">
+			<input type="text" value={{destination}} class="form-control rounded center-div" />
+		</form>
+	</div>
+</div>

@@ -11,3 +11,37 @@ header.masthead {
 .question-header {
   line-height: 60px;
 }
+
+.rounded {
+  border-radius: 50px ! important;
+}
+
+.center-div {
+  height: 60px;
+  width: 300px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: orange;
+  text-align: center;
+}
+
+.form-box {
+  padding-bottom: 50px;
+  margin: auto;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 50px;
+}
+
+.airplane {
+  max-height: 70px;
+  max-width: 150px;
+  padding: 10px;
+}
+
+.splash {
+  display: flex;
+  background-image: url("images/splash.jpg");
+  background-size: 100% 750px;
+  height: 800px;
+}
