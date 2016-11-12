@@ -20,7 +20,6 @@ angular.module('myApp.preferences', ['ngRoute', 'ui.bootstrap'])
       console.log(JSON.stringify(error));
       });
       */
-
     $scope.go = function (path) {
       nomadService.passenger.preferences = $scope.styles;
       $location.path(path);
