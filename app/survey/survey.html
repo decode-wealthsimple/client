@@ -5,9 +5,9 @@
 			<input name="origins" id="origin" type="text" placeholder="Montreal, Canada" ng-model="origin" uib-typeahead="city.name for city in cities | filter:$viewValue | limitTo:10"
 			class="form-control rounded center-div input-dimensions">
 			<img src="images/plane-icon.png" class="airplane">
-			<input name="destinations" id="destination" type="text" placeholder="Montreal, Canada" ng-model="destination" uib-typeahead="city.name for city in cities | filter:$viewValue | limitTo:10"
-			class="form-control rounded center-div input-dimensions">
-			<button type="button" class="btn-trip" ng-click="getImage(destination)">View Trip</button>
+			<input name="destinations" id="destination" type="text" placeholder="Montreal, Canada" ng-change="" ng-model="destination" uib-typeahead="city.name for city in cities | filter:$viewValue | limitTo:10"
+			class="form-control rounded center-div input-dimensions" my-enter="getImage(destination)">
+			<!--<button type="button" class="btn-trip" ng-click="getImage(destination)">View Trip</button>-->
 		</form>
 	</div>
 </div>

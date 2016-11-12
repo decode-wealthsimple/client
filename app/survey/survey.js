@@ -21,14 +21,19 @@ angular.module('myApp.survey', ['ngRoute', 'ui.bootstrap'])
     { name: 'Montreal, Canada', url: 'montreal-canada'}];
     //$scope.cities = [];
 
+    $scope.$watch(() => $scope.destination, (newVal, oldVal) => {
+      console.log(`Val changed from ${oldVal} to ${newVal}`);
+    });
+
     nomadService.getCities().$promise.then((cities) => {
-      //$scope.cities = cities;
+      $scope.cities = cities;
       //console.log(JSON.stringify(cities));
     }, (error) => {
       console.log(JSON.stringify(error));
       });
 
     $scope.getImage = function (destinationName) {
+      console.log(destinationName);
       const destination = $scope.cities.find((city) => city.name === destinationName);
       const url = destination.url.substring(1, destination.url.length);
       $scope.chosenCity = destination;
@@ -52,6 +57,19 @@ angular.module('myApp.survey', ['ngRoute', 'ui.bootstrap'])
       }
       nomadService.passenger.city = $scope.chosenCity;
       console.log(nomadService.passenger.origin);
+      nomadService.postTrip({
+        origin: nomadService.passenger.origin,
+        destination: nomadService.passenger.destination,
+        start: "2018/04/3",
+        end: "2018/04/28",
+        style: 3,
+        saved_amount: 0,
+        total_amount: 0
+      }).$promise.then((res) => {
+        nomadService.passenger.id = res.id;
+      }).catch((res) => {
+        console.log(res);
+      })
       $location.path(path);
     };
   }]);

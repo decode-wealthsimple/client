@@ -1,3 +1,6 @@
+html {
+  background-color: #F7F8F2;
+}
 .container {
   background-color: #F7F8F2;
   padding: 20px;
@@ -16,16 +19,17 @@
   color: #AA9D81;
 }
 .price-tab {
-  padding: 10px 30px 30px 30px;
+  padding: 0px 30px 30px 30px;
 }
 .price-tab img {
   display: inline-block;
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
+  transform: translateY(13px);
 }
 .price-tab h1 {
   display: inline-block;
-  padding: 35px 20px 20px 20px;
+  padding: 0px 20px 20px 20px;
 }
 .center {
   transform: translateX(20%);
@@ -55,6 +59,7 @@ label {
 .button.primary-action {
   width: 100%;
   border-radius: 0px;
+  font-size: 40px;
 }
 .timetitle {
   color: #AA9D81;
@@ -62,4 +67,7 @@ label {
 .date {
   width: 100%;
   margin-bottom: 15px;
+}
+.button > a {
+  padding: 0px;
 }

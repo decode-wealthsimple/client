@@ -1,0 +1,139 @@
+.full {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.backContainer {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  height: 10%;
+  padding: 10px;
+  padding-left: 0;
+  width: 30%;
+  align-items: center;
+}
+
+.backArrow {
+  width: 30px;
+  height: 50%;
+}
+
+.backButton {
+  margin: 0;
+  margin: 0 10px 0 10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 0;
+  align-items: center;
+}
+
+.card {
+  flex-grow: 1;
+  border: 1px solid #dddddc;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.photo {
+  background-image: url('../images/splash.jpg');
+  background-size: cover;
+  height: 300px;
+  position: relative;
+}
+
+.stampText {
+  font-family: 'Arial';
+  color: white;
+  font-weight: 500;
+  font-size: 3em;
+  justify-content: center;
+  padding-left: 20px;
+  line-height: 94%;
+  margin: 0;
+}
+
+.resultStamp {
+  background-image: url('../images/results-stamp.png');
+  position: absolute;
+  background-size: cover;
+  bottom: 0;
+  left: -13px;
+  height: 50%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.info {
+  height: 7em;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+
+}
+
+.days {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-left: 25px;
+  padding-right: 10px;
+}
+
+.daysText {
+  margin-bottom: 0;
+  font-size: 1.6em;
+}
+
+.savingsPlan {
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  padding: 21px 10px 10px 30px;
+}
+
+.savingsSubtext {
+  flex-grow: 1;
+  margin-bottom: 0;
+  height: 0;
+  color: #777;
+}
+
+.savingsAmount {
+  flex-grow: 2;
+  margin-bottom: 0;
+  padding-top: 11px;
+  font-size: 3em;
+}
+
+.savingTime {
+  display: flex;
+  flex-grow: 1;
+}
+
+.savingTimeText {
+  padding-top: 0.45em;
+}
+
+.wealthSimpleButton {
+  width: 75%;
+  cursor: pointer;
+  padding: 15px;
+  text-align: center;
+  background-color: #f9b018;
+  color: white;
+  font-size: 1.5em;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.wealthSimpleButton :hover {
+  text-decoration: none;
+}
