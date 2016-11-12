@@ -71,3 +71,6 @@ label {
 .button > a {
   padding: 0px;
 }
+.button > p {
+  color: #AA9D81;
+}
