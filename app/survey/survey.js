@@ -10,5 +10,10 @@ angular.module('myApp.survey', ['ngRoute'])
 }])
 
 .controller('SurveyCtrl', ['$scope', 'nomadService', function($scope, nomadService) {
-  $scope.cities = nomadService.getDestinations();
+  $scope.origin = "Montreal, Canada";
+  $scope.destination = "Berlin, Germany";
+  $scope.cities = [];
+    nomadService.getDestinations().$promise.then((cities) => {
+      $scope.cities = cities;
+    });
 }]);
