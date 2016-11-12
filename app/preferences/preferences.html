@@ -1,10 +1,40 @@
 <div class="preferences-splash">
-    <p ng-click="go('survey')">← Edit Trip Route</p>
+	<div class ="back-button">
+		<img src="images/back-arrow.png" class="arrow"></img>
+    	<h2 ng-click="go('survey')" class="back-text">Edit Trip Duration</h2>
+	</div>
 	<!-- 	<div class="form-group form-box">
 		<form class="flex form-group">
 			<input name="styles" id="style" type="text" placeholder="Backpacker" ng-model="style" uib-typeahead="style for style in styles | filter:$viewValue | limitTo:10"
 			class="form-control rounded center-div">
 		</form>
         </div> -->
-    <p ng-click="go('cost')">Continue→</p>
+
+	<div class="travel-style">
+		<h3 style="margin-left:15px"> Pick Travel Style </h3>
+		
+		<div class="style-choice">
+			<div class="choice1" ng-class="{'active': choice == 1}" ng-click="changeClass(1)"></div>
+			<h1 class="price">$</h1>
+		</div>
+		<div class="style-choice">
+			<div class="choice2" ng-class="{'active': choice == 2}" ng-click="changeClass(2)"></div>
+			<h1 class="price">$$</h1>
+		</div>
+		<div class="style-choice">
+			<div class="choice3" ng-class="{'active': choice == 3}" ng-click ="changeClass(3)"></div>
+			<h1 class="price">$$$</h1>
+		</div>
+	
+	</div>
+
+    <p ng-click="go('cost')" class="btn-continue" style="top: 750px">Continue</p>
 </div>
+
+<script type="text/javascript">
+	document.getElementByClass(".choice3").addEventListener('click', function() {
+	      getElementByClass(".choice3").removeClass("active");
+	      this.addClass("active");
+	    });
+	console.log("hi");
+</script>
