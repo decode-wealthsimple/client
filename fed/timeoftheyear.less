@@ -1,11 +1,73 @@
 #myChart {
-	height: 300px;
+	z-index: 0;
+	height: 200px;
+
 }
 .mychart {
-	padding: 30px;
-	background-color: white;
+	padding-left: 0;
+	//padding-right: 20px;
+	padding-top: 0;
+	padding-bottom: 0;
+	background-color: #d1e4e5;
 	margin: 20px;
+	position: relative;
+	height: 350px;
+	overflow: hidden;
+	border: 1px solid #dfdfdf;
 }
 .timetitle{
 	padding-left: 20px;
+}
+.white-space {
+	height: 70px;
+	background-color: white;
+	bottom: 0;
+	transform: translateY(280px);
+}
+.year-tab {
+	z-index: 999999;
+	padding-top: 0px;
+	//padding: 50px;
+	padding: 0px;
+	position: absolute;
+	height: 400px;
+	.col-1{
+		margin: 0;
+		//padding: 20px;
+		height: 300px;
+		display: inline-block;
+
+		.button{
+			&:hover {
+				background-color: lighten(#fab131, 20%);
+				border: 2px solid #f9b018;
+			}
+			&:active{
+				background-color: #fab131;
+			}
+			&:visited{
+				background-color: rgba(70, 70, 70, 0.5)
+			}
+			//padding: 0;
+			// padding-left: 25px;
+			// padding-right: 25px;
+			border-radius: 0;
+			height: 350px;
+			bottom: 0;
+			border: 2px solid transparent;
+			background-color: transparent;
+			p {
+				bottom: 0;
+				transform: translateY( 150px);
+			}
+
+		}
+		.active{
+			background-color: lighten(#fab131, 20%);
+			border: 2px solid #f9b018;
+		}
+	}
+}
+.curve {
+	position: absolute;
 }

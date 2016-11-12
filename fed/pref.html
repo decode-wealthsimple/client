@@ -19,8 +19,26 @@
 		<!-- widget for the the time of the year -->
 		<div class="container">
 		<p class = "timetitle">Time of the Year</p>
-		<div class="row-md mychart">
-			<canvas id="myChart" style="height:300px"></canvas>
+		<div class="mychart">
+			<canvas id="myChart" style="height:200px" class ="col-12 curve"></canvas>
+			<div class="row year-tab">
+			<div class="col-1">
+				<button class="button"><p>Jan</p></button>
+			</div>
+			<div class="col-1"><button class="button"><p>Feb</p></button></div>
+			<div class="col-1"><button class="button"><p>Mar</p></button></div>
+			<div class="col-1"><button class="button active"><p>Apr</p></button></div>
+			<div class="col-1"><button class="button"><p>May</p></button></div>
+			<div class="col-1"><button class="button"><p>Jun</p></button></div>
+			<div class="col-1"><button class="button"><p>Jul</p></button></div>
+			<div class="col-1"><button class="button"><p>Aug</p></button></div>
+			<div class="col-1"><button class="button"><p>Oct</p></button></div>
+			<div class="col-1"><button class="button"><p>Nov</p></button></div>
+			<div class="col-1"><button class="button"><p>Nov</p></button></div>
+			<div class="col-1"><button class="button"><p>Dec</p></button></div>
+			<div class="col-1"><button class="button"><p>Dec</p></button></div>
+			</div>
+			<div class="row white-space"></div>
 		</div>
 
 		<div class="row-md pref">
@@ -55,20 +73,30 @@
 
 		<script>
 			var ctx = document.getElementById("myChart").getContext("2d");
+			ctx.canvas.height = 300;
 			var data = {
-				labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+				//labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "],
+				labels: ["", "","","","","","","","","","",""],
 				datasets: [
 					{
-						data: [300, 400, 200, 400, 500, 600, 650, 500, 550, 400, 350, 400],
-						spanGaps:false
+						fillColor: '#f0f0f0',
+						data: [650, 640, 640, 520, 640, 650, 620, 640, 630, 660, 670, 680],
+						spanGaps:false,
+						backgroundColor: 'rgb(256,256,256)',
+						strokeColor: '#000',
+						fillColor: '#000',
+						lineTension: 0
 					}
 				]
 			};
 			var myChart = new Chart(ctx, {
+				height: 260,
 				type: 'line',
 				data: data,
+				maintainAspectRatio: false,
 				options:{
 					scales: {
+						height: 260,
 
 						xAxes: [{
 							gridLines:{
@@ -76,6 +104,7 @@
 							}
 						}],
 						yAxes: [{
+							display: false,
 							gridLines:{
 								display: false,
 							}
@@ -86,8 +115,8 @@
 					},
 					tooltips: {
 						display: false,
-					}
-
+					},
+					bezierCurve: false
 				}
 			});
 
