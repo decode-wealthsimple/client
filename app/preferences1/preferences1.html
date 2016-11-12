@@ -1,0 +1,113 @@
+<div class="container preference1">
+<p class = "timetitle">Time of the Year</p>
+<div class="mychart">
+	<canvas id="myChart" style="height:200px" class ="col-12 curve"></canvas>
+	<div class="row year-tab">
+	<div class="col-1">
+		<button class="button"><p>Jan</p></button>
+	</div>
+	<div class="col-1"><button class="button"><p>Feb</p></button></div>
+	<div class="col-1"><button class="button"><p>Mar</p></button></div>
+	<div class="col-1"><button class="button active"><p>Apr</p></button></div>
+	<div class="col-1"><button class="button"><p>May</p></button></div>
+	<div class="col-1"><button class="button"><p>Jun</p></button></div>
+	<div class="col-1"><button class="button"><p>Jul</p></button></div>
+	<div class="col-1"><button class="button"><p>Aug</p></button></div>
+	<div class="col-1"><button class="button"><p>Oct</p></button></div>
+	<div class="col-1"><button class="button"><p>Nov</p></button></div>
+	<div class="col-1"><button class="button"><p>Nov</p></button></div>
+	<div class="col-1"><button class="button"><p>Dec</p></button></div>
+	<div class="col-1"><button class="button"><p>Dec</p></button></div>
+	</div>
+	<div class="pricebymonth"><p>Price By <br>Month</p></div>
+	<div class="row white-space"></div>
+</div>
+
+<div class="row-md pref">
+	<div class="col-4 duration-trip">
+		<div class="form-group">
+			<label>Departure Date</label>
+	        <div class="">
+	        	<input type="date" class="form-control date" name="date" placeholder="yyyy-mm-dd" min="2016-11-12">
+	        </div>
+		</div>
+				
+		<div class="form-group">
+			<label>Trip Duration (days)</label>
+			<input type="number" class="form-control form-input-text days" placeholder="days" min="1">
+		</div>
+	</div>
+	<div class="col-8 price-estimate">
+		<p>Price Estimate</p>
+		<div class="price-tab center">
+			<img id="plane" class="pull-right" src="../app/images/plane-icon.png"/>
+			<h1>$3,000 - $3,500</h1>
+		</div>
+		<button type="button" class="button primary-action">
+			<a href="#" class="button primary-action ">Let's go!</a>
+		</button>
+	</div>
+
+
+<script>
+	var ctx = document.getElementById("myChart").getContext("2d");
+	ctx.canvas.height = 300;
+	var data = {
+		//labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "],
+		labels: ["", "","","","","","","","","","",""],
+		datasets: [
+			{
+				fillColor: '#f0f0f0',
+				data: [650, 640, 640, 420, 640, 650, 620, 640, 630, 660, 670, 680],
+				spanGaps:false,
+				backgroundColor: 'rgb(256,256,256)',
+				strokeColor: '#f9b018',
+				fillColor: '#f9b018',
+				lineTension: 0,
+				borderColor:"rgba(114,114,229,1)",
+pointBorderColor:"rgba(114,114,229,1)",
+pointBackgroundColor:"rgba(114,114,229,1)",
+pointHoverBackgroundColor:"rgba(114,114,229,1)",
+pointHoverBorderColor:"rgba(114,114,229,1)"
+			}
+		]
+	};
+	var myChart = new Chart(ctx, {
+		height: 260,
+		type: 'line',
+		data: data,
+		maintainAspectRatio: false,
+		options:{
+			scales: {
+				height: 260,
+
+				xAxes: [{
+					gridLines:{
+						display: false,
+					}
+				}],
+				yAxes: [{
+					display: false,
+					gridLines:{
+						display: false,
+					}
+				}]
+			},
+			legend: {
+				display: false,
+			},
+			tooltips: {
+				display: false,
+			},
+			bezierCurve: false
+		}
+	});
+
+</script>
+<script>
+// script for selecting the bottom elements
+$(.button)
+</script>		
+
+	</div>
+</div>	

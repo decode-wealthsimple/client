@@ -23,26 +23,26 @@
 	</head>
 	<body>
 		<!-- widget for the the time of the year -->
-		<div class="container">
+		<div class="container preference1">
 		<p class = "timetitle">Time of the Year</p>
 		<div class="mychart">
 			<canvas id="myChart" style="height:200px" class ="col-12 curve"></canvas>
 			<div class="row year-tab">
 			<div class="col-1">
-				<button class="button"><p>Jan</p></button>
+				<button class="button buttonc"><p>Jan</p></button>
 			</div>
-			<div class="col-1"><button class="button"><p>Feb</p></button></div>
-			<div class="col-1"><button class="button"><p>Mar</p></button></div>
-			<div class="col-1"><button class="button active"><p>Apr</p></button></div>
-			<div class="col-1"><button class="button"><p>May</p></button></div>
-			<div class="col-1"><button class="button"><p>Jun</p></button></div>
-			<div class="col-1"><button class="button"><p>Jul</p></button></div>
-			<div class="col-1"><button class="button"><p>Aug</p></button></div>
-			<div class="col-1"><button class="button"><p>Oct</p></button></div>
-			<div class="col-1"><button class="button"><p>Nov</p></button></div>
-			<div class="col-1"><button class="button"><p>Nov</p></button></div>
-			<div class="col-1"><button class="button"><p>Dec</p></button></div>
-			<div class="col-1"><button class="button"><p>Dec</p></button></div>
+			<div class="col-1"><button class="button buttonc"><p>Feb</p></button></div>
+			<div class="col-1"><button class="button buttonc"><p>Mar</p></button></div>
+			<div class="col-1"><button class="button  buttonc"><p>Apr</p></button></div>
+			<div class="col-1"><button class="button buttonc"><p>May</p></button></div>
+			<div class="col-1"><button class="button buttonc"><p>Jun</p></button></div>
+			<div class="col-1"><button class="button buttonc"><p>Jul</p></button></div>
+			<div class="col-1"><button class="button buttonc"><p>Aug</p></button></div>
+			<div class="col-1"><button class="button buttonc"><p>Oct</p></button></div>
+			<div class="col-1"><button class="button buttonc"><p>Nov</p></button></div>
+			<div class="col-1"><button class="button buttonc"><p>Nov</p></button></div>
+			<div class="col-1"><button class="button buttonc"><p>Dec</p></button></div>
+			<div class="col-1"><button class="button buttonc"><p>Dec</p></button></div>
 			</div>
 			<div class="pricebymonth"><p>Price By <br>Month</p></div>
 			<div class="row white-space"></div>
@@ -129,9 +129,13 @@
 			});
 
 		</script>
-		<script>
+		<script type="text/javascript">
 		// script for selecting the bottom elements
-		$(.button)
+			   $(".buttonc").on("click", function() {
+			  $(".buttonc").removeClass("active");
+			  $(this).addClass("active");
+			});
+		</script>
 		</script>		
 
 			</div>
