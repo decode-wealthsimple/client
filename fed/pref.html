@@ -18,7 +18,7 @@
 	<body>
 		<!-- widget for the the time of the year -->
 		<div class="container">
-		<p>Time of the Year</p>
+		<p class = "timetitle">Time of the Year</p>
 		<div class="row-md mychart">
 			<canvas id="myChart" style="height:300px"></canvas>
 		</div>
@@ -69,13 +69,28 @@
 				data: data,
 				options:{
 					scales: {
-						gridLines: {
-							display: false,
-							//color: white;
-						}
+
+						xAxes: [{
+							gridLines:{
+								display: false,
+							}
+						}],
+						yAxes: [{
+							gridLines:{
+								display: false,
+							}
+						}]
+					},
+					legend: {
+						display: false,
+					},
+					tooltips: {
+						display: false,
 					}
+
 				}
 			});
+
 		</script>		
 
 			</div>
