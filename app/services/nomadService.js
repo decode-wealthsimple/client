@@ -10,7 +10,7 @@ myModule.factory('nomadService', ['$http', '$resource', function ($http, $resour
     var NewTrip = $resource(baseUrl + 'trips/new/.:format', { format: '@format'}, { headers: { 'Access-Control-Allow-Origin': '*' }});
     var EditTrip = $resource(baseUrl + 'trips/:id/edit/.:format', { id: '@id', format: '@format' }, { headers: { 'Access-Control-Allow-Origin': '*' }});
     var Trip = $resource(baseUrl + 'trips/:id', { id: '@id' }, { headers: { 'Access-Control-Allow-Origin': '*' }});
-    var Image = $resource(baseUrl + '/nomad/cities/:url/image', { id: '@url' }, { headers: { 'Access-Control-Allow-Origin': '*' }});
+    var Image = $resource(baseUrl + 'nomad/cities/:url/image', { url: '@id' }, { headers: { 'Access-Control-Allow-Origin': '*' }});
     
     instance.getTrips = Trips.get;
     instance.getCities = Cities.query;

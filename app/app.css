@@ -57,7 +57,7 @@ input[type="text"] {
 }
 
 .survey-splash {
-  background: url("images/splash.jpg") no-repeat center;
+  /*background: url("images/splash.jpg") no-repeat center;*/
   background-size: cover;
   width:1240px;
   height: 800px;
@@ -70,7 +70,7 @@ input[type="text"] {
 }
 
 .preferences-splash {
-  background: url("images/preferences.jpg") no-repeat center;
+  /*background: url("images/preferences.jpg") no-repeat center;*/
   background-size: cover;
   width:1240px;
   height: 800px;
@@ -106,4 +106,12 @@ input[type="text"] {
   left: 0;
   right: 0;
   margin:auto;
+}
+
+.destination-image {
+    top: 25%;
+    position: absolute;
+    width:1240px;
+    height: 850px;
+    margin:auto;
 }
