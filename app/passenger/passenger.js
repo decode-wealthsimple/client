@@ -1,5 +1,6 @@
 function Passenger() {
-  this.origin = "";
-  this.destination = "";
+  this.id = 0;
   this.preferences = [];
+  this.origin = {};
+  this.destination = {};
 }

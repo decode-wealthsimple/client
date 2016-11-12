@@ -5,16 +5,18 @@ myModule.factory('nomadService', ['$http', '$resource', function ($http, $resour
 
     instance.passenger = new Passenger();
 
-    var Cities = $resource(baseUrl + 'nomad/cities/.:format', { format: '@format'}, { headers: { 'Access-Control-Allow-Origin': '*' }});
-    var Trips = $resource(baseUrl + 'trips/.:format', { format: '@format'}, { headers: { 'Access-Control-Allow-Origin': '*' }});
-    var NewTrip = $resource(baseUrl + 'trips/new/.:format', { format: '@format'}, { headers: { 'Access-Control-Allow-Origin': '*' }});
-    var EditTrip = $resource(baseUrl + 'trips/:id/edit/.:format', { id: '@id', format: '@format' }, { headers: { 'Access-Control-Allow-Origin': '*' }});
-    var Trip = $resource(baseUrl + 'trips/:id', { id: '@id' }, { headers: { 'Access-Control-Allow-Origin': '*' }});
-    var Image = $resource(baseUrl + '/nomad/cities/:url/image', { id: '@url' }, { headers: { 'Access-Control-Allow-Origin': '*' }});
+    const Cities = $resource(baseUrl + 'cities/.:format', { format: '@format'}, { headers: { 'Access-Control-Allow-Origin': '*' }});
+    const Trips = $resource(baseUrl + 'trips/.:format', { format: '@format'}, { headers: { 'Access-Control-Allow-Origin': '*' }});
+    const NewTrip = $resource(baseUrl + 'trips/new/.:format', { format: '@format'}, { headers: { 'Access-Control-Allow-Origin': '*' }});
+    const EditTrip = $resource(baseUrl + 'trips/:id/edit/.:format', { id: '@id', format: '@format' }, { headers: { 'Access-Control-Allow-Origin': '*' }});
+    const Trip = $resource(baseUrl + 'trips/:id', { id: '@id' }, { headers: { 'Access-Control-Allow-Origin': '*' }});
+    const Image = $resource(baseUrl + 'nomad/cities/:url/image', { url: '@url' }, { headers: { 'Access-Control-Allow-Origin': '*' }});
     
     instance.getTrips = Trips.get;
     instance.getCities = Cities.query;
     instance.getImage = Image.get;
+    instance.getTrip = Trip.get;
+    instance.postTrip = Trip.save;
 
     instance.getStyles = function () {
         return [
