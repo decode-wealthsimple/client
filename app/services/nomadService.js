@@ -16,7 +16,7 @@ myModule.factory('nomadService', ['$http', '$resource', function ($http, $resour
     instance.getCities = Cities.query;
     instance.getImage = Image.get;
     instance.getTrip = Trip.get;
-    instance.postTrip = Trip.post;
+    instance.postTrip = Trip.save;
 
     instance.getStyles = function () {
         return [
