@@ -14,6 +14,12 @@
 		<link rel="stylesheet" type="text/css" href="../app/bower_components/wealthsimple-fabric/css/fabric.css">
 		<link rel="stylesheet" type="text/css" href="app.css">
 		<link rel="stylesheet" href="timeoftheyear.css">
+
+		<script type="text/javascript">
+			$(function() {
+			  	$('#datetimepicker1').datetimepicker();
+  		  	});
+		</script>
 	</head>
 	<body>
 		<!-- widget for the the time of the year -->
@@ -44,29 +50,25 @@
 		<div class="row-md pref">
 			<div class="col-4 duration-trip">
 				<div class="form-group">
-					<label>Year</label>
-					<select class="form-control" id="year">
-						<option value="">2016</option>
-						<option value="">2017</option>
-						<option value="">2018</option>
-						<option value="">2019</option>
-						<option value="">2020</option>
-					</select>
+					<label>Departure Date</label>
+			        <div class="">
+			        	<input type="date" class="form-control date" name="date" placeholder="yyyy-mm-dd" min="2016-11-12">
+			        </div>
 				</div>
 						
 				<div class="form-group">
 					<label>Trip Duration (days)</label>
-					<input type="number" class="form-control form-input-text" placeholder="days" id="days">
+					<input type="number" class="form-control form-input-text days" placeholder="days" min="1">
 				</div>
 			</div>
 			<div class="col-8 price-estimate">
-				<label>Price Estimate</label>
+				<p>Price Estimate</p>
 				<div class="price-tab center">
 					<img id="plane" class="pull-right" height="70" src="../app/images/plane-icon.png"/>
 					<h1>$3,000 - $3,500</h1>
 				</div>
 				<button type="button" class="button primary-action">
-					<a href="#" class="button primary-action">Let's go!</a>
+					<a href="#" class="button primary-action ">Let's go!</a>
 				</button>
 			</div>
 
