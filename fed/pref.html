@@ -9,13 +9,15 @@
 	</head>
 	<body>
 		<!-- widget for the the time of the year -->
+		<div class="container">
 		<div class="row">
 			<canvas id="myChart" height="500"></canvas>
 		</div>
 		<div class="row">
 			<div class="col-sm-3">
-				<div class="panel panel-default">
-					<div class="panel-body">
+
+				<div class="">
+					<div class="">
 						<div class="form-group">
 							<label>Year</label>
 							<select name="" id="" class="form-control">
@@ -26,7 +28,6 @@
 								<option value="">2020</option>
 							</select>
 						</div>
-
 						
 						<div class="form-group">
 							<label>Trip Duration (days)</label>
@@ -34,23 +35,25 @@
 						</div>
 					</div>
 				</div>
+
 			</div>
 			<div class="col-sm-9">
-				<div class="panel panel-default">
-					<div class="panel-body">
+				<div class="">
+					<div class="">
 						<label>Price Estimate</label>
-						<div class="row">
+						<div class="row" id="price">
 							<div class="col-sm-3">
-								<img height="70" src="../app/images/airplane.png">
+								<img id="plane" class="pull-right" height="70" src="../app/images/airplane.png"/>
 							</div>
 							<div class="col-sm-9">
-								<h1 id="estimate-price">$3,000 - $3,500</h1>
+								<h1 class="center-block" id="estimated-price">$3,000 - $3,500</h1>
 							</div>
 						</div>
 						<button type="button" class="btn btn-warning btn-block">Let's go!</button>
 					</div>
 				</div>
 			</div>
+
 		</div>
 
 
@@ -66,5 +69,8 @@
 				}
 			})
 		</script>		
+
+			</div>
+		</div>		
 	</body>
 </html>
