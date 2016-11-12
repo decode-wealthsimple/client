@@ -1,12 +1,15 @@
 <div class="survey-splash">
-	    <p ng-click="go('preferences')" style="color: white;" class="btn-continue">Continue</p>
+	    <p ng-click="go('preferences')" class="btn-continue" style="top: 505px">Continue</p>
 	<div class="form-group form-box form-center">
 		<form class="flex form-group">
-			<input name="origins" id="origin" type="text" placeholder="Montreal, Canada" ng-model="origin" uib-typeahead="city.name for city in cities | filter:$viewValue | limitTo:10"
-			class="form-control rounded center-div input-dimensions">
+			<input autocomplete="off" name="origins" id="origin" type="text" placeholder="Montreal, Canada" ng-model="origin" uib-typeahead="city.name for city in cities | filter:$viewValue | limitTo:10"
+			class="form-control rounded center-div input-dimensions"  my-enter="saveOrigin(origin)">
 			<img src="images/plane-icon.png" class="airplane">
-			<input name="destinations" id="destination" type="text" placeholder="Montreal, Canada" ng-model="destination" uib-typeahead="city.name for city in cities | filter:$viewValue | limitTo:10"
-			class="form-control rounded center-div input-dimensions">
+			<input autocomplete="off" name="destinations" id="destination" type="text" placeholder="Montreal, Canada" ng-change="" ng-model="destination" uib-typeahead="city.name for city in cities | filter:$viewValue | limitTo:10"
+			class="form-control rounded center-div input-dimensions" my-enter="getImage(destination)">
+			<!--<button type="button" class="btn-trip" ng-click="getImage(destination)">View Trip</button>-->
 		</form>
 	</div>
 </div>
+<img src="{{splashImage}}" class="destination-image">
+<!--ng-style="{ 'background': 'url({{splashImage}}) no-repeat center'}-->
