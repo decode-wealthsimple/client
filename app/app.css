@@ -52,11 +52,54 @@ input[type="text"] {
   top:50px;
 }
 
-.splash {
+.next {
+  text-align: center;
+}
+
+.survey-splash {
   background: url("images/splash.jpg") no-repeat center;
   background-size: cover;
   width:1240px;
   height: 800px;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin:auto;
+}
+
+.preferences-splash {
+  background: url("images/preferences.jpg") no-repeat center;
+  background-size: cover;
+  width:1240px;
+  height: 800px;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin:auto;
+}
+
+.cost-splash {
+  background: url("images/cost.jpg") no-repeat center;
+  background-size: cover;
+  width:1240px;
+  height: 800px;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin:auto;
+}
+
+.final-splash {
+  background: url("images/final.jpg") no-repeat center;
+  background-size: cover;
+  width:1240px;
+  height: 850px;
   position: relative;
   top: 0;
   bottom: 0;

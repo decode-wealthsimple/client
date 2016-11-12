@@ -3,6 +3,8 @@ myModule.factory('nomadService', ['$http', '$resource', function ($http, $resour
     let instance = {};
     let baseUrl = 'http://localhost:3000/';
 
+    instance.passenger = new Passenger();
+
     var Cities = $resource(baseUrl + 'nomad/cities/.:format', { format: '@format'}, { headers: { 'Access-Control-Allow-Origin': '*' }});
     var Trips = $resource(baseUrl + 'trips/.:format', { format: '@format'}, { headers: { 'Access-Control-Allow-Origin': '*' }});
     var NewTrip = $resource(baseUrl + 'trips/new/.:format', { format: '@format'}, { headers: { 'Access-Control-Allow-Origin': '*' }});

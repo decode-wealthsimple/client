@@ -9,13 +9,20 @@ angular.module('myApp.preferences', ['ngRoute', 'ui.bootstrap'])
     });
   }])
 
-  .controller('PreferencesCtrl', ['$scope', 'nomadService', function ($scope, nomadService) {
+  .controller('PreferencesCtrl', ['$scope', '$location', 'nomadService', function ($scope, $location, nomadService) {
     $scope.style = "";
-    $scope.styles = [];
+    $scope.styles = nomadService.getStyles();
+    /*
     nomadService.getStyles().$promise.then((styles) => {
       $scope.styles = styles;
       console.log(JSON.stringify(styles));
     }, (error) => {
       console.log(JSON.stringify(error));
-    });
+      });
+      */
+
+    $scope.go = function (path) {
+      nomadService.passenger.preferences = $scope.styles;
+      $location.path(path);
+    };
   }]);

@@ -9,7 +9,7 @@ angular.module('myApp.survey', ['ngRoute', 'ui.bootstrap'])
     });
   }])
 
-  .controller('SurveyCtrl', ['$scope', 'nomadService', function ($scope, nomadService) {
+  .controller('SurveyCtrl', ['$scope', '$location', 'nomadService', function ($scope, $location, nomadService) {
     $scope.origin = "";
     $scope.destination = "";
     $scope.cities = [];
@@ -19,4 +19,14 @@ angular.module('myApp.survey', ['ngRoute', 'ui.bootstrap'])
     }, (error) => {
       console.log(JSON.stringify(error));
     });
+    $scope.go = function (path) {
+      if ($scope.origin != "") {
+        nomadService.passenger.origin = $scope.origin;
+      }
+      if ($scope.destination != "") {
+        nomadService.passenger.destination = $scope.destination;
+      }
+      console.log(nomadService.passenger.origin);
+      $location.path(path);
+    };
   }]);

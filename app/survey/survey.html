@@ -1,4 +1,5 @@
-<div class="splash">
+<div class="survey-splash">
+	    <p ng-click="go('preferences')" style="color: white;">Continue→</p>
 	<div class="form-group form-box">
 		<form class="flex form-group">
 			<input name="origins" id="origin" type="text" placeholder="Montreal, Canada" ng-model="origin" uib-typeahead="city.name for city in cities | filter:$viewValue | limitTo:10"
