@@ -19,61 +19,37 @@
 		<!-- widget for the the time of the year -->
 		<div class="container">
 		<div class="row-md">
-			<canvas id="myChart" height="300"></canvas>
+			<!-- <canvas id="myChart" height="300"></canvas> -->
 		</div>
+
 		<div class="row-md">
-			<div class="col-4">
-
-		<div class="row">
-			<div class="col-sm-3">
-
-				<div class="">
-					<div class="" id="date">
-
-						<div class="form-group">
-							<label>Year</label>
-							<select class="form-control" id="year">
-								<option value="">2016</option>
-								<option value="">2017</option>
-								<option value="">2018</option>
-								<option value="">2019</option>
-								<option value="">2020</option>
-							</select>
-						</div>
+			<div class="col-4 duration-trip">
+				<div class="form-group">
+					<label>Year</label>
+					<select class="form-control" id="year">
+						<option value="">2016</option>
+						<option value="">2017</option>
+						<option value="">2018</option>
+						<option value="">2019</option>
+						<option value="">2020</option>
+					</select>
+				</div>
 						
-						<div class="form-group">
-							<label>Trip Duration (days)</label>
-							<input type="number" class="form-control form-input-text" placeholder="days" id="days">
-						</div>
-			</div>
-			<div class="col-8">
-						<label>Price Estimate</label>
-						<div class="row" id="price">
-							<div class="col-4">
-								<img id="plane" class="pull-right" height="70" src="../app/images/airplane.png"/>
-							</div>
-							<div class="col-8">
-								<h1 class="center-block" id="estimated-price">$3,000 - $3,500</h1>
-							</div>
-						</div>
-						<button type="button" class="btn btn-warning btn-block">Let's go!</button>
-			<div class="col-sm-9">
-				<div class="">
-					<div class="" id="price-estimate">
-						<label>Price Estimate</label>
-						<div class="row">
-							<div class="col-sm-3">
-								<img id="plane" class="pull-right" height="70" src="../app/images/plane-icon.png"/>
-							</div>
-							<div class="col-sm-9">
-								<h1 class="center-block">$3,000 - $3,500</h1>
-							</div>
-						</div>
-						<button type="button" class="btn btn-warning btn-block" id="button">Let's go!</button>
-					</div>
+				<div class="form-group">
+					<label>Trip Duration (days)</label>
+					<input type="number" class="form-control form-input-text" placeholder="days" id="days">
 				</div>
 			</div>
-		</div>
+			<div class="col-8 price-estimate">
+				<label>Price Estimate</label>
+				<div class="price-tab center">
+					<img id="plane" class="pull-right" height="70" src="../app/images/plane-icon.png"/>
+					<h1>$3,000 - $3,500</h1>
+				</div>
+				<button type="button" class="button primary-action">
+					<a href="#" class="button primary-action">Let's go!</a>
+				</button>
+			</div>
 
 
 		<script>
