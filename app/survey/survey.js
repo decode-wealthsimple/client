@@ -32,11 +32,23 @@ angular.module('myApp.survey', ['ngRoute', 'ui.bootstrap'])
       console.log(JSON.stringify(error));
       });
 
+    $scope.saveOrigin = function(originName){
+      const origin = $scope.cities.find((city) => city.name === originName);
+      nomadService.passenger.origin = origin;
+      console.log(nomadService.passenger.origin.id);
+    }
+
+    $scope.saveDestination = function(destinationName){
+      const destination = $scope.cities.find((city) => city.name === destinationName);
+      nomadService.passenger.destination = destination;
+      console.log(nomadService.passenger.destination.id);
+    }
+
     $scope.getImage = function (destinationName) {
       console.log(destinationName);
+      $scope.saveDestination(destinationName);
       const destination = $scope.cities.find((city) => city.name === destinationName);
       const url = destination.url.substring(1, destination.url.length);
-      $scope.chosenCity = destination;
       nomadService.getImage({ url: url }).$promise.then((data) => {
         $scope.splashImage = data.image;
         console.log(JSON.stringify(data));
