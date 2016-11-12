@@ -1,11 +1,18 @@
 /* app css stylesheet */
+body {
+  background-color:#F4F4F0;
+}
 
-header.masthead {
+/*header.masthead {
   display: flex;
   background-color: #fab131;
   color: white;
 
   padding-left: 60px;
+}*/
+
+input[type="text"] {
+  font: 36px arial, sans-serif;
 }
 
 .question-header {
@@ -17,8 +24,8 @@ header.masthead {
 }
 
 .center-div {
-  height: 60px;
-  width: 300px;
+  height: 80px;
+  width: 400px;
   border-style: solid;
   border-width: 3px;
   border-color: orange;
@@ -26,21 +33,34 @@ header.masthead {
 }
 
 .form-box {
-  padding-bottom: 50px;
+  height: 50px;
+  padding: 0px 80px 75px 80px;
   margin: auto;
   background-color: rgba(255, 255, 255, 0.4);
-  border-radius: 50px;
+  border-radius: 70px;
+}
+
+.flex {
+  display: flex;
 }
 
 .airplane {
-  max-height: 70px;
+  max-height: 90px;
   max-width: 150px;
-  padding: 10px;
+  padding: 20px;
+  position: relative;
+  top:50px;
 }
 
 .splash {
-  display: flex;
-  background-image: url("images/splash.jpg") !important;
-  background-size: 100% 750px;
+  background: url("images/splash.jpg") no-repeat center;
+  background-size: cover;
+  width:1240px;
   height: 800px;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin:auto;
 }

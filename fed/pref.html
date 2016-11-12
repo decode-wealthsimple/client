@@ -1,0 +1,87 @@
+<html>
+	<head>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<!-- script for the data chart -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.js"></script>
+
+		<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="app.css">
+	</head>
+	<body>
+		<!-- widget for the the time of the year -->
+		<div class="container">
+		<div class="row">
+			<canvas id="myChart" height="500"></canvas>
+		</div>
+		<div class="row">
+			<div class="col-sm-3">
+
+				<div class="">
+					<div class="">
+						<div class="form-group">
+							<label>Year</label>
+							<select name="" id="" class="form-control">
+								<option value="">2016</option>
+								<option value="">2017</option>
+								<option value="">2018</option>
+								<option value="">2019</option>
+								<option value="">2020</option>
+							</select>
+						</div>
+						
+						<div class="form-group">
+							<label>Trip Duration (days)</label>
+							<input type="number" class="form-control" placeholder="days">
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="col-sm-9">
+				<div class="">
+					<div class="">
+						<label>Price Estimate</label>
+						<div class="row" id="price">
+							<div class="col-sm-3">
+								<img id="plane" class="pull-right" height="70" src="../app/images/airplane.png"/>
+							</div>
+							<div class="col-sm-9">
+								<h1 class="center-block" id="estimated-price">$3,000 - $3,500</h1>
+							</div>
+						</div>
+						<button type="button" class="btn btn-warning btn-block">Let's go!</button>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+		<script>
+			var ctx = document.getElementById("myChart");
+			var data = {
+				labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+				datasets: [
+					{
+						data: [300, 400, 200, 400, 500, 600, 650, 500, 550, 400, 350, 400],
+						spanGaps:false
+					}
+				]
+			};
+			var myChart = new Chart({
+				type: 'line',
+				data: data,
+				options:{
+					title:{
+						display: true,
+						text: 'Time of the Year'
+					}
+				}
+			});
+		</script>		
+
+			</div>
+		</div>		
+	</body>
+</html>
