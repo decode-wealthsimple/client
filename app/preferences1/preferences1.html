@@ -106,7 +106,11 @@ pointHoverBorderColor:"rgba(114,114,229,1)"
 </script>
 <script>
 // script for selecting the bottom elements
-$(.button)
+	document.getElementByClass("buttonc").onclick = function(){toggleclass()};
+	function toggleclass(){
+		document.getElementByClass("buttonc").removeClass("active");
+		$this.addClass("active");
+	}
 </script>		
 
 	</div>
