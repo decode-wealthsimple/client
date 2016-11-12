@@ -1,12 +1,16 @@
 <html>
 	<head>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<!-- script for the data chart -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.js"></script>
+		<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="app.css">
 	</head>
 	<body>
+		<!-- widget for the the time of the year -->
 		<div class="row">
-			
+			<canvas id="myChart" height="500"></canvas>
 		</div>
 		<div class="row">
 			<div class="col-sm-3">
@@ -47,6 +51,20 @@
 					</div>
 				</div>
 			</div>
-		</div>		
+		</div>
+
+
+		<script>
+			var ctx = document.getElementById("myChart");
+			var myChart = new Chart({
+				type: 'line',
+				options:{
+					title:{
+						display: true,
+						text: 'Time of the Year'
+					}
+				}
+			})
+		</script>		
 	</body>
 </html>
