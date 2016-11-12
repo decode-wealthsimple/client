@@ -9,7 +9,8 @@ angular.module('myApp', [
   'myApp.cost',
   'myApp.preferences',
   'myApp.survey',
-  'myApp.nomadService'
+  'myApp.nomadService',
+  'myApp.preferences1'
 ]).
   config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
     $locationProvider.hashPrefix('!');
@@ -23,10 +24,14 @@ angular.module('myApp', [
       templateUrl: 'preferences/preferences.html',
       controller: 'PreferencesCtrl'
     });
+    $routeProvider.when('/preferences1', {
+    	templateUrl: 'preferences/preferences1.html',
+    	controller: 'PreferencesCtrl'
+    })
 
     $routeProvider.when('/cost', {
-      templateUrl: 'cost/cost.html',
-      controller: 'CostCtrl'
+      templateUrl: 'preferences1/preferences1.html',
+      controller: 'PreferencesCtrl1'
     });
 
     $routeProvider.when('/final', {
