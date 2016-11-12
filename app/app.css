@@ -33,6 +33,11 @@ input[type="text"] {
   padding: 20px 50px 20px 50px;
   font-size:25px;
 }
+
+.btn-trip {
+  background-color: #F9B018;
+}
+
 .btn-continue:hover {
   background-color:#C2B49A;
   transition:0.5s
@@ -89,7 +94,7 @@ input[type="text"] {
 }
 
 .survey-splash {
-  background: url("images/splash.jpg") no-repeat center;
+  /*background: url("images/splash.jpg") no-repeat center;*/
   background-size: cover;
   width:1240px;
   height: 800px;
@@ -102,7 +107,7 @@ input[type="text"] {
 }
 
 .preferences-splash {
-  background: url("images/preferences.jpg") no-repeat center;
+  /*background: url("images/preferences.jpg") no-repeat center;*/
   background-size: cover;
   width:1240px;
   height: 800px;
@@ -138,4 +143,13 @@ input[type="text"] {
   left: 0;
   right: 0;
   margin:auto;
+}
+
+.destination-image {
+    top: 0%;
+    position: absolute;
+    width:100%;
+    height: 1000px;
+    margin:auto;
+    z-index: -1;
 }

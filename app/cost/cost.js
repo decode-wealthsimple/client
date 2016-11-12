@@ -10,8 +10,8 @@ angular.module('myApp.cost', ['ngRoute', 'ui.bootstrap'])
   }])
 
   .controller('CostCtrl', ['$scope', '$location', 'nomadService', function ($scope, $location, nomadService) {
-    $scope.origin = nomadService.passenger.origin;
-    $scope.destination = nomadService.passenger.destination;
+    $scope.origin = nomadService.passenger.origin.name;
+    $scope.destination = nomadService.passenger.destination.name;
     $scope.go = function (path) {
       $location.path(path);
     };
