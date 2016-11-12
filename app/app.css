@@ -33,7 +33,7 @@ input[type="text"] {
 }
 
 .form-box {
-  padding: 20px 80px 75px 80px;
+  padding: 0px 80px 75px 80px;
   margin: auto;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.4);
@@ -41,11 +41,11 @@ input[type="text"] {
 }
 
 .airplane {
-  max-height: 70px;
+  max-height: 90px;
   max-width: 150px;
   padding: 20px;
   position: relative;
-  top:40px;
+  top:50px;
 }
 
 .splash {
