@@ -2,14 +2,15 @@
 	<head>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="app.css">
 	</head>
 	<body>
 		<div class="row">
 			
 		</div>
 		<div class="row">
-			<div class="col-sm-3">
-				<div class="section">
+			<div class="col-sm-3 panel panel-default">
+				<div class="section panel-body">
 					<p>Year</p>
 					<select name="" id="" class="form-control">
 						<option value="">2016</option>
@@ -26,9 +27,14 @@
 						<p>days</p>
 					</div>
 				</div>
-			<div class="col-sm-9">
+			</div>
+			<div class="col-sm-9 panel panel-default">
 				<p>Price Estimate</p>
-				<div class="section"></div>
+				<div class="section panel-body">
+					<span id="plane-icon" class="glyphicon glyphicon-send"></span>
+					<p id="estimate-price">$3,000 - $3,500</p>
+				</div>
+				<button type="button" class="btn btn-warning">Let's go!</button>
 			</div>
 		</div>		
 	</body>
