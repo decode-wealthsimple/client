@@ -18,11 +18,12 @@
 	<body>
 		<!-- widget for the the time of the year -->
 		<div class="container">
-		<div class="row-md">
-			<!-- <canvas id="myChart" height="300"></canvas> -->
+		<p>Time of the Year</p>
+		<div class="row-md mychart">
+			<canvas id="myChart" style="height:300px"></canvas>
 		</div>
 
-		<div class="row-md">
+		<div class="row-md pref">
 			<div class="col-4 duration-trip">
 				<div class="form-group">
 					<label>Year</label>
@@ -53,7 +54,7 @@
 
 
 		<script>
-			var ctx = document.getElementById("myChart");
+			var ctx = document.getElementById("myChart").getContext("2d");
 			var data = {
 				labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
 				datasets: [
@@ -67,9 +68,11 @@
 				type: 'line',
 				data: data,
 				options:{
-					title:{
-						display: true,
-						text: 'Time of the Year'
+					scales: {
+						gridLines: {
+							display: false,
+							//color: white;
+						}
 					}
 				}
 			});
