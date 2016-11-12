@@ -15,6 +15,7 @@
     "bootstrap": "latest",
     "jquery": "latest",
     "angular-bootstrap": "latest",
-    "html5-boilerplate": "^5.3.0"
+    "html5-boilerplate": "^5.3.0",
+    "wealthsimple-fabric": "https://github.com/wealthsimple/fabric.git#^2.0.0"
   }
 }

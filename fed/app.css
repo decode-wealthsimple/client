@@ -1,0 +1,26 @@
+.container {
+  background-color: #F7F8F2;
+  padding: 20px;
+}
+.duration-trip {
+  background-color: white;
+  border: 1px solid #dfdfdf;
+  padding: 30px;
+  padding-left: 50px;
+}
+.price-estimate {
+  background-color: white;
+  border: 1px solid #dfdfdf;
+  padding: 30px;
+}
+.price-tab img {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+.price-tab h1 {
+  display: inline-block;
+}
+.center {
+  transform: translateX(12%);
+}
