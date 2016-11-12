@@ -1,10 +1,12 @@
-<div class="splash">
-	<div class="form-box">
-		<form>
-			
-			<input type="text" value={{origin}} class="form-control rounded center-div" />
+<div class="survey-splash">
+	    <p ng-click="go('preferences')" style="color: white;">Continue→</p>
+	<div class="form-group form-box">
+		<form class="flex form-group">
+			<input name="origins" id="origin" type="text" placeholder="Montreal, Canada" ng-model="origin" uib-typeahead="city.name for city in cities | filter:$viewValue | limitTo:10"
+			class="form-control rounded center-div">
 			<img src="images/plane-icon.png" class="airplane">
-			<input type="text" value={{destination}} class="form-control rounded center-div" />
+			<input name="destinations" id="destination" type="text" placeholder="Montreal, Canada" ng-model="destination" uib-typeahead="city.name for city in cities | filter:$viewValue | limitTo:10"
+			class="form-control rounded center-div">
 		</form>
 	</div>
 </div>
