@@ -5,7 +5,7 @@ myModule.factory('nomadService', ['$http', '$resource', function ($http, $resour
 
     instance.passenger = new Passenger();
 
-    var Cities = $resource(baseUrl + 'nomad/cities/.:format', { format: '@format'}, { headers: { 'Access-Control-Allow-Origin': '*' }});
+    var Cities = $resource(baseUrl + 'cities/.:format', { format: '@format'}, { headers: { 'Access-Control-Allow-Origin': '*' }});
     var Trips = $resource(baseUrl + 'trips/.:format', { format: '@format'}, { headers: { 'Access-Control-Allow-Origin': '*' }});
     var NewTrip = $resource(baseUrl + 'trips/new/.:format', { format: '@format'}, { headers: { 'Access-Control-Allow-Origin': '*' }});
     var EditTrip = $resource(baseUrl + 'trips/:id/edit/.:format', { id: '@id', format: '@format' }, { headers: { 'Access-Control-Allow-Origin': '*' }});

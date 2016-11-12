@@ -15,11 +15,14 @@ angular.module('myApp.survey', ['ngRoute', 'ui.bootstrap'])
     $scope.destinationUrl = "";
     $scope.splashImage = "images/splash.jpg";
     //$scope.splashImage = "https://nomadlist.com/assets/img/cities/prague-czech-republic-1500px.jpg";
-    //$scope.cities = [{ name: 'Prague, Czech Republic', url:  '/prague-czech-republic' }];
-    $scope.cities = [];
+    $scope.cities = [{ name: 'Prague, Czech Republic', url:  '/prague-czech-republic' },
+    { name: 'Berlin, Germany', url: '/berlin-germany'},
+    { name: 'Budapest, Hungary', url: '/budapest-hungary'},
+    { name: 'Montreal, Canada', url: 'montreal-canada'}];
+    //$scope.cities = [];
 
     nomadService.getCities().$promise.then((cities) => {
-      $scope.cities = cities;
+      //$scope.cities = cities;
       //console.log(JSON.stringify(cities));
     }, (error) => {
       console.log(JSON.stringify(error));
@@ -28,6 +31,7 @@ angular.module('myApp.survey', ['ngRoute', 'ui.bootstrap'])
     $scope.getImage = function (destinationName) {
       const destination = $scope.cities.find((city) => city.name === destinationName);
       const url = destination.url.substring(1, destination.url.length);
+      $scope.chosenCity = destination;
       nomadService.getImage({ url: url }).$promise.then((data) => {
         $scope.splashImage = data.image;
         console.log(JSON.stringify(data));
@@ -46,6 +50,7 @@ angular.module('myApp.survey', ['ngRoute', 'ui.bootstrap'])
       if ($scope.destination != "") {
         nomadService.passenger.destination = $scope.destination;
       }
+      nomadService.passenger.city = $scope.chosenCity;
       console.log(nomadService.passenger.origin);
       $location.path(path);
     };

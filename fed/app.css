@@ -4,26 +4,62 @@
 }
 .duration-trip {
   background-color: white;
-  border: 1px solid #dfdfdf;
-  padding: 30px;
-  padding-left: 50px;
+  border: 1px solid #dddddc;
+  padding: 40px 30px 30px 30px;
 }
 .price-estimate {
   background-color: white;
-  border: 1px solid #dfdfdf;
-  padding: 30px;
+  border: 1px solid #dddddc;
+}
+.price-estimate > p {
+  padding: 30px 30px 0px 30px;
+  color: #AA9D81;
+}
+.price-tab {
+  padding: 10px 30px 30px 30px;
 }
 .price-tab img {
   display: inline-block;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
 }
 .price-tab h1 {
   display: inline-block;
+  padding: 35px 20px 20px 20px;
 }
 .center {
-  transform: translateX(12%);
+  transform: translateX(20%);
 }
 .pref {
   margin: 20px;
+}
+input.form-control {
+  border-color: #FCB118;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 0;
+  color: #ABABAB;
+  padding: 8px;
+}
+input.form-control.days {
+  border-color: #FCB118;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 0;
+  color: #ABABAB;
+  padding: 9px;
+}
+label {
+  color: #AA9D81;
+}
+.button.primary-action {
+  width: 100%;
+  border-radius: 0px;
+}
+.timetitle {
+  color: #AA9D81;
+}
+.date {
+  width: 100%;
+  margin-bottom: 15px;
 }
